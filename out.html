@@ -1,0 +1,46 @@
+
+
+<html>
+
+<style>
+
+  a {
+    color: orange;
+  }
+
+</style>
+
+<script src="https://capgicom70-dev-ed.develop.my.site.com/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+  <script>
+
+    const appName = 'c:LightningOut';
+    const componentName = 'c:testout';
+    const lightningEndpoint = 'https://capgicom70-dev-ed.develop.my.site.com';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+
+    };
+
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+
+
+</html>
